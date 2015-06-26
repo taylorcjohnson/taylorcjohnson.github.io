@@ -55,6 +55,9 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
+										<li>
+												<a class="page-scroll" href="#resume">Resume</a>
+										</li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
@@ -74,11 +77,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading"><i class="fa fa-map-marker"></i></h1>
-                        <p class="intro-text">Geographer, Cartographer, Aspiring Application Developer.<br>Learn more below!</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
+                        <h1 class="brand-heading"><span class="no-show">|</span><i class="fa fa-map-marker"></i><span class="blinking-cursor">|</span></h1>
+                        <p class="intro-text">Geographer. Cartographer. Developer.</p>
+                        <!-- <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        </a> -->
+												<a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -89,10 +93,10 @@
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Taylor C. Johnson, GISP</h2>
+                <h2>Taylor C. Johnson, <a href="https://www.gisci.org/">GISP</a></h2>
                 <p>I am a geographer, cartographer, and geospatial application developer.  
-								After earning my BS and MS at the University of Georgia I decided to begin my career as a geographic information specialist in the public sector.  
-								I have worked for various public state and federal agencies including the US Geological Survey most recently.
+								After earning my BSc and MSc I decided to begin my career as a geographic information specialist in the public sector.  
+								Over the past decade, I have worked for various state and federal agencies including the US Army Corps of Engineers and the US Geological Survey most recently.
 								I enjoy crafting tools and cartographic products for effective geospatial analysis and visualization.</p>
                 <p>For desktop applications, I frequently use the Python arcpy module for geoprocessing applications in ArcGIS.
 								Additionally, I have been reintroducing myself to ESRI's ArcObjects SDK in the .NET framework (using VB.Net and C#).  
@@ -102,27 +106,99 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="content-section text-center">
+    <!-- Resume Section -->
+    <section id="resume" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Portfolio</h2>
-                    <p>Feel free to browse some of my recent in-development applications</p>
-										<p>Coming Soon!</p>
-                    <!-- <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">View Resume</a> -->
+                    <h2>Resume</h2>
+                    <p>Click to download my current resume.  Feel free to browse some of my recent in-development applications below.</p>
+										<!-- <p>Coming Soon!</p> -->
+                    <a href="#" class="btn btn-default btn-lg">View Resume</a>
                 </div>
             </div>
         </div>
     </section>
+		
+		<!-- Portfolio Section -->
+		<!-- Add appropriate classes to css -->
+		<section id="portfolio" class="no-padding">
+				<div class="container-fluid">
+						<div class="row no-gutter no-show">
+						    <div class="col-lg-3 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+								<div class="col-lg-3 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+						</div>
+						<div class="container content-section text-center">
+								<h2>Portfolio</h2>
+								<p>Please check back for updates or contact me for additional examples.</p>
+						</div>
+				</div>
+		</section>
 
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Me</h2>
-                <p>Feel free to contact me about all things geospatial!</p>
-                <p><a href="mailto:taylor.christian.johnson@gmail.com">taylor.christian.johnson@gmail.com</a></p>
+                <p>Feel free to <a href="mailto:taylor.christian.johnson@gmail.com">contact me</a> about all things geospatial!</p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
                         <a href="https://github.com/taylorcjohnson/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>

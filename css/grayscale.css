@@ -57,6 +57,20 @@ a:focus {
     color: #1d9b6c;
 }
 
+.blinking-cursor {
+	font-weight: 100;
+	-webkit-animation: 1.5s blink step-end infinite;
+	-moz-animation: 1.5s blink step-end infinite;
+	-ms-animation: 1.5s blink step-end infinite;
+	-o-animation: 1.5s blink step-end infinite;
+	animation: 1.5s blink step-end infinite;
+}
+
+.no-show {
+	font-weight: 100;
+	visibility: hidden;
+}
+
 .light {
     font-weight: 400;
 }
@@ -221,6 +235,51 @@ a:focus {
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
+}
+
+@keyframes "blink" {
+	from, to {
+		color: transparent;
+	}
+	50% {
+		color: white;
+	}
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
 }
 
 @-webkit-keyframes pulse {    
