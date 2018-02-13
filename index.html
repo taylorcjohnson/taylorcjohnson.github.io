@@ -14,6 +14,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- MapboxJS CSS -->
+    <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+
     <!-- Custom CSS -->
     <link href="css/grayscale.css" rel="stylesheet">
 
@@ -94,17 +97,20 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Taylor C. Johnson, <a href="https://www.gisci.org/">GISP</a></h2>
-                <p>I am a geographer, cartographer, and geospatial application developer.  
-								After earning my BSc and MSc I decided to begin my career as a geographic information specialist in the public sector.  
-								Over the past decade, I have worked for various state and federal agencies including the US Army Corps of Engineers and the US Geological Survey most recently.
-								I enjoy crafting tools and cartographic products for effective geospatial analysis and visualization.</p>
-                <p>For desktop applications, I frequently use the Python arcpy module for geoprocessing applications in ArcGIS and have been reintroducing myself to ESRI's ArcObjects SDK in the .NET framework.  
-								In addition to creating websites with HTML5, I have begun exploring front-end frameworks like <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://semantic-ui.com/">Semantic UI</a>.
-								Currently, I enjoy exploring the recent versions of <a href="https://developers.arcgis.com/javascript/">ESRI's Javascript API</a> and <a href="https://www.mapbox.com/mapbox.js/api/v2.2.1/">mapbox.js</a> (based on Leaflet).
-								In the future, I hope to further incorporate enterprise-level database technology in my geospatial web applications.</p>
+                <h4>I am a geographer, cartographer, and software developer pursuing my MS in Computer Science at Georgia Tech</h4>
+                <p>After earning my BS and MS in Geography, I decided to begin my career as a geographic information systems analyst and developer in the public sector.  
+								Over the past decade, I have worked for various state and federal agencies including the US Army Corps of Engineers and the US Geological Survey.
+								I enjoy designing tools and products for effective geospatial analysis and visualization.</p>
+                <p>In addition to creating websites with HTML and CSS, I enjoy experimenting with React implementations of front-end frameworks like <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://www.material-ui.com/">Material UI</a>.
+                                I frequently develop web map solutions implemented in <a href="http://leafletjs.com/">Leaflet</a>, <a href="https://www.mapbox.com/help/define-mapbox-gl/">Mapbox GL</a>, or <a href="https://openlayers.org/">OpenLayers</a>
+                                with Redux application state management, but am looking forward to exploring emerging GraphQL technologies.</p>
             </div>
         </div>
     </section>
+    </br>
+    </br>
+    </br>
+    </br>
 
     <!-- Resume Section -->
     <section id="resume" class="content-section text-center">
@@ -262,10 +268,47 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
+
+    <!-- Mapbox JS API key is registered to Taylor Johnson. Don't be lame - quickly get your own: https://www.mapbox.com/help/how-access-tokens-work/ -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+    <!-- Mapbox GL Map Setup -->
+    <script>
+        L.mapbox.accessToken = 'pk.eyJ1Ijoiam9obnNvbjd1Z2EiLCJhIjoiUDU1VXpCNCJ9.gL2i7S0K2hnw69L5xZlTug';
+        var map = L.mapbox.map('map', 'mapbox.dark')
+            .setView([37.8, -96], 4);
+
+        var geojson = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-81.6557, 30.3322]
+                },
+                properties: {
+                    title: 'Jacksonville',
+                    description: 'Says Hello!'
+                }
+            },
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-104.9887, 39.7419]
+                },
+                properties: {
+                    title: 'Denver',
+                    description: 'Says Hello!'
+                }
+            }
+        ];
+
+        var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map);
+    </script>
 
 </body>
 
